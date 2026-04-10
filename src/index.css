@@ -1,0 +1,77 @@
+:root {
+  /* OBSIDIAN KINETIC: Dark Mode Tokens (Default) */
+  --surface-base: #1A1A1A;
+  --surface-container: #242424;
+  --surface-container-high: #2A2A2A;
+  --surface-container-highest: #353534;
+  
+  --text-primary: #FFFFFF;
+  --text-secondary: #B9CCB2;
+  
+  --accent-primary: #00FF41;
+  --accent-dim: #00E639;
+  --accent-secondary: #006E16; /* For some light mode accents or subtle borders */
+
+  --warning-orange: #FD9E00;
+  
+  --border-radius: 0px;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+[data-theme="light"] {
+  /* OBSIDIAN KINETIC: Light Mode Tokens */
+  --surface-base: #F5F5F5;
+  --surface-container: #FFFFFF;
+  --surface-container-high: #E0E0E0;
+  --surface-container-highest: #D5D5D5;
+  
+  --text-primary: #1A1A1A;
+  --text-secondary: #4A4A4A;
+  
+  --accent-primary: #006E16; 
+  --accent-dim: #00FF41; /* Used for intense accents still */
+}
+
+/* Global Reset & Strategy Enforcements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: var(--border-radius) !important; /* Strict Enforcement */
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--surface-base);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .text-technical {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Base Utility Classes */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-dim) 100%);
+  color: #003907; /* dark text on green */
+  border: none;
+  padding: 8px 16px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.glass-panel {
+  background-color: rgba(36, 36, 36, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Ghost border */
+}
